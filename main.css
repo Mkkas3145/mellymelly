@@ -1,0 +1,184 @@
+:root {
+    --background: #101010;
+    --box1: #202020;
+    --box2: #303030;
+    --box3: #404040;
+    --box4: #505050;
+    --box5: #606060;
+
+    --foreground1: #ffffff;
+    --foreground2: #eeeeee;
+    --foreground3: #dddddd;
+    --foreground4: #cccccc;
+    --foreground5: #bbbbbb;
+    --foreground6: #aaaaaa;
+    --foreground7: #909090;
+    --foreground8: #808080;
+    --foreground9: #707070;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0px; cursor: url(image/mouse.webp) 0 0, auto;
+}
+* {
+    font-family: "Pretendard";
+}
+
+header {
+    width: 100%; height: max-content;
+    position: fixed; top: 0px;
+    aspect-ratio: 5 / 1;
+}
+header img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.header_division {
+    width: 100%; height: max-content;
+    aspect-ratio: 5 / 1;
+}
+
+main {
+    width: 100%; height: max-content;
+    background-color: var(--background);
+    position: relative;
+}
+.main_wrap {
+    width: 100%; height: max-content;
+    max-width: 900px; padding: 20px;
+    margin-left: auto; margin-right: auto;
+    box-sizing: border-box;
+}
+.profile {
+    width: 100%; height: max-content;
+    display: flex;
+}
+.profile_left {
+    width: 100px; height: 100px;
+    background: linear-gradient(to bottom right, #ff0080, #ffffff);
+    border-radius: 50%; margin-right: 20px;
+    display: flex; justify-content: center;
+    align-items: center;
+}
+.profile_left_wrap {
+    width: 95px; height: 95px;
+    background-color: var(--background);
+    border-radius: 50%; display: flex;
+    justify-content: center; align-items: center;
+}
+.profile_left_wrap img {
+    width: 90px; height: 90px;
+    object-fit: cover; border-radius: 50%;
+}
+.profile_right {
+    width: calc(100% - 120px); height: max-content;
+}
+.profile_right_title {
+    width: 100%; height: max-content;
+    font-size: 24px; font-weight: bold;
+    line-height: calc(24px * 1.5);
+    color: var(--foreground1);
+}
+.profile_right_description {
+    width: 100%; height: max-content;
+    font-size: 14px; line-height: calc(14px * 1.5);
+    color: var(--foreground6); margin-top: 5px;
+}
+.profile_right_tags {
+    width: 100%; height: max-content;
+    display: flex; gap: 10px; margin-top: 10px;
+    flex-wrap: wrap;
+}
+.profile_right_tag {
+    width: max-content; height: max-content;
+    background-color: var(--box1); color: var(--foreground6);
+    padding: 10px 15px; border-radius: 10px;
+    font-weight: bold; font-size: 14px;
+    display: flex; align-items: center;
+}
+.profile_right_tag img {
+    width: 20px; height: 20px;
+    border-radius: 50%; margin-right: 10px;
+}
+.profile_right_tag svg {
+    width: 20px; height: 20px;
+    fill: var(--foreground6); margin-right: 10px;
+}
+
+.box {
+    background-color: var(--box1); border-radius: 20px;
+    padding: 20px; box-sizing: border-box; margin-top: 20px;
+}
+.box_youtube {
+    width: 100%; height: max-content;
+    display: flex; flex-direction: column;
+    gap: 20px;
+}
+.box iframe {
+    width: 100%; aspect-ratio: 16 / 9;
+    border-radius: 20px;
+}
+
+.qna_top {
+    width: 100%; height: max-content;
+    display: flex; align-items: center;
+}
+.qna_top_left {
+    width: 40px; height: 40px;
+    background: linear-gradient(to bottom right, #ff0080, #ffffff);
+    border-radius: 50%; font-weight: bold; font-size: 20px;
+    display: flex; justify-content: center; align-items: center;
+    margin-right: 20px;
+}
+.qna_top_right {
+    width: calc(100% - 60px); height: max-content;
+    font-size: 16px; color: var(--foreground1);
+    line-height: calc(16px * 1.5); font-weight: bold;
+}
+.qna_bottom {
+    width: 100%; height: max-content;
+    display: flex; margin-top: 10px;
+}
+.qna_bottom_left {
+    width: 40px; height: max-content;
+    display: flex; justify-content: center;
+    margin-right: 20px;
+}
+.qna_bottom_left svg {
+    width: 20px; height: 20px;
+    fill: var(--foreground6); margin-left: 10px;
+}
+.qna_bottom_right {
+    width: calc(100% - 60px); height: max-content;
+    font-size: 14px; color: var(--foreground6);
+    line-height: calc(14px * 1.5);
+}
+.qna_bottom_right a {
+    color: #ffffff;
+}
+.qna_line {
+    width: 100%; height: 1px;
+    background-color: var(--box2);
+    margin: 20px 0px;
+}
+
+@keyframes showEffect {
+    0% { top: 0%; opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+footer {
+    width: 100%; height: 100vh;
+    position: fixed; bottom: 0px;
+    z-index: 1; pointer-events: none;
+}
+
+.mouse {
+    width: 100px; height: 100px;
+    position: fixed; z-index: 1;
+    background-color: #ffffff;
+    margin-left: -50px; margin-top: -50px;
+    filter: blur(100px); opacity: 0.5;
+    pointer-events: none;
+}
